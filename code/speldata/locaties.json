@@ -1,0 +1,78 @@
+[{
+    "id": [1,0],
+    "description": "You are standing in your cell. It is very barebones, aside from a poster on the east wall.",
+    "locked": [false,true,false,false],
+    "lock_description": "You contemplate walking into the east wall, but you don't want to damage your nice poster.",
+    "unlock_command": "pick up poster",
+    "unlock_description": "You roll the poster up and put it down on the ground, revealing the hole you've digged.",
+    "death_command": "die",
+    "death_description": "Through sheer willpower you die",
+    "objects": null,
+    "win": false
+}, {
+    "id": [1,1],
+    "description": "You are crawling through the tunnel you've digged. To the west, your cell. To the east, an exit into a room. The pass you swiped from a guard weeks ago is poking you in the ribs",
+    "locked": [false,false,false,false],
+    "lock_description": null,
+    "unlock_command": null,
+    "unlock_description": null,
+    "death_command": "die",
+    "death_description": "Through sheer willpower you die",
+    "objects": "pass",
+    "win": false
+}, {
+    "id": [1,2],
+    "description": "You are standing in the kitchen. There's a tasty looking donut on the counter. To the north is a cellblock. There's a door leading outside on the south wall.",
+    "locked": [false,false,true,false],
+    "lock_description": "The door is locked.",
+    "unlock_command": "open door with pass",
+    "unlock_description": "You use the pass to unlock the door.",
+    "death_command": "die",
+    "death_description": "Through sheer willpower you die",
+    "objects": "donut",
+    "win": false
+}, {
+    "id": [0,2],
+    "description": "You are standing in a cellblock. To the north is a guardroom, to the south the kitchen.",
+    "locked": [false,false,false,false],
+    "lock_description": null,
+    "unlock_command": null,
+    "unlock_description": null,
+    "death_command": "move north",
+    "death_description": "You walk into the guardroom and promptly get rearrested and thrown into maximum security",
+    "objects": null,
+    "win": false
+}, {
+    "id": [2,2],
+    "description": "You are standing in the yard. It's a chilly day, but freedom is nearly at hand. The gate lies to the east",
+    "locked": [false,false,false,false],
+    "lock_description": null,
+    "unlock_command": null,
+    "unlock_description": null,
+    "death_command": "die",
+    "death_description": "Through sheer willpower you die",
+    "objects": null,
+    "win": false
+}, {
+    "id": [2,3],
+    "description": "You are standing at the gate, southbound to the outside. A guard is blocking your way.",
+    "locked": [false,false,true,false],
+    "lock_description": "The guard blocks your way. He looks intimidating but also slightly hungry.",
+    "unlock_command": "use donut on guard",
+    "unlock_description": "The guard gleefully accepts the donut and thankfully steps aside",
+    "death_command": "push guard",
+    "death_description": "The guard is taking none of your shit and bashes you with his baton until you pass out.",
+    "objects": null,
+    "win": false
+}, {
+    "id": [3,3],
+    "description": "You are standing outside. Finally, you are free!",
+    "locked": [false,false,false,false],
+    "lock_description": null,
+    "unlock_command": null,
+    "unlock_description": null,
+    "death_command": "die",
+    "death_description": "Through sheer willpower you die. Why would you do this after escaping?",
+    "objects": null,
+    "win": true
+}
