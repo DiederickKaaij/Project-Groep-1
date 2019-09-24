@@ -4,14 +4,14 @@
     "locked": [false,true,false,false],
     "lock_description": "You contemplate walking into the east wall, but you don't want to damage your nice poster.",
     "unlock_command": "pick up poster",
-    "unlock_description": "You roll the poster up and put it down on the ground, revealing the hole you've digged.",
+    "unlock_description": "You roll the poster up and put it down on the ground, revealing the hole you dug.",
     "death_command": "die",
     "death_description": "Through sheer willpower you die",
     "objects": null,
     "win": false
 }, {
     "id": [1,1],
-    "description": "You are crawling through the tunnel you've digged. To the west, your cell. To the east, an exit into a room. The pass you swiped from a guard weeks ago is poking you in the ribs",
+    "description": "You are crawling through the tunnel you dug. To the west, your cell. To the east, an exit into a room. The pass you swiped from a guard weeks ago is poking you in the ribs",
     "locked": [false,false,false,false],
     "lock_description": null,
     "unlock_command": null,
