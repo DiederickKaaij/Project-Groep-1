@@ -1,0 +1,28 @@
+[{
+    "id": 1,
+    "naam": "hal",
+    "omschrijving": "Je staat in de hal. Er ligt een sleutel. Er is een deur naar de woonkamer.",
+    "locked": false,
+    "unlock_omschrijving": null,
+    "objecten": ["sleutel"],
+    "verbonden_met": [2],
+    "win": false
+}, {
+    "id": 2,
+    "naam": "woonkamer",
+    "omschrijving": "Je bent in de woonkamer. Je kan naar de hal of de keuken.",
+    "locked": false,
+    "unlock_omschrijving": null,
+    "objecten": [],
+    "verbonden_met": [1,3],
+    "win": false
+}, {
+    "id": 3,
+    "naam": "keuken",
+    "omschrijving": "Je bent in de keuken. Eindelijk eten!",
+    "locked": true,
+    "unlock_omschrijving": "Met de sleutel open je de deur.",
+    "objecten": [],
+    "verbonden_met": [2],
+    "win": true
+}]
