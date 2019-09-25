@@ -18,5 +18,23 @@ class TestCommand(unittest.TestCase):
         self.command = Command("bullshit", 1)
         self.assertFalse(self.command.isCommando())
 
+    def test_canMove(self):
+        self.command = Command("move hal", 2)
+        result = self.command.canMove(1)
+        self.assertTrue(result)
+
+        self.assertFalse(self.command.canMove(3))
+
+        self.command = Command("move hal", 3)
+        self.assertFalse(self.command.canMove(1))
+
+    def test_move(self):
+        self.command = Command("move hal", 2)
+        result = self.command.move(1)
+        self.assertEqual(result, 1)
+
+        result2 = self.command.move(3)
+        self.assertEqual(result2, 0)
+
 if __name__ == '__main__':
     unittest.main()
