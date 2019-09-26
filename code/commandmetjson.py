@@ -2,26 +2,28 @@ from locatiemetjson import Locatie
 
 class Command:
     
-    def __init__(self, commando, loc):
+    def __init__(self, commando, loc, inv):
         self.commando = commando
         self.loc = loc
         self.locatie = Locatie()
+        self.inv = inv
 
     def isCommando(self):
-        if self.commando == "pick up key":
-            return True
+        if self.commando == "pick up sleutel":
+            return self.pickUp()
         elif self.commando == "move hal":
-            return True
+            return self.move(1)
         elif self.commando == "move woonkamer":
-            return True
+            return self.move(2)
         elif self.commando == "move keuken":
-            return True
+            return self.move(3)
         elif self.commando == "look":
-            return True
+            return self.look()
         elif self.commando == "open":
-            return True
+            return self.open()
         else:
-            return False
+            print("Dit commando ken ik niet. Ik kan alleen move, look, open en pick up")
+            return 0
 
     def canMove(self, bestemming):
         for y in self.locatie.locaties:
@@ -42,4 +44,21 @@ class Command:
             return bestemming
         else:
             print("Je kunt daar niet heen")
+            return 0
+
+    def look(self):
+        print(self.locatie.locaties[self.loc-1]['omschrijving'])
+        return 0
+
+    def pickUp(self):
+        ding = self.locatie.geefObject("sleutel")
+        return ding
+    
+    def open(self):
+        if "sleutel" in self.inv and self.loc == 2:
+            self.locatie.locaties[2]['locked'] = False
+            print(self.locatie.locaties[2]['unlock_omschrijving'])
+            return 0
+        else:
+            print("Je hebt de sleutel niet of bent niet bij de deur!")
             return 0
