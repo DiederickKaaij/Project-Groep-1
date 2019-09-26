@@ -51,14 +51,19 @@ class Command:
         return 0
 
     def pickUp(self):
-        ding = self.locatie.geefObject("sleutel")
-        return ding
+        if self.loc == 1:
+            ding = self.locatie.geefObject("sleutel")
+            print("je pakt de sleutel op")
+            return ding
+        else:
+            print("hier ligt geen sleutel")
+            return "stof"
     
     def open(self):
         if "sleutel" in self.inv and self.loc == 2:
             self.locatie.locaties[2]['locked'] = False
             print(self.locatie.locaties[2]['unlock_omschrijving'])
-            return 0
+            return self.move(3)
         else:
             print("Je hebt de sleutel niet of bent niet bij de deur!")
             return 0
